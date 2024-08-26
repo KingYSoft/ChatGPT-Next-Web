@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { getServerSideConfig } from "../config/server";
 import md5 from "spark-md5";
 import { ACCESS_CODE_PREFIX, ModelProvider } from "../constant";
+import { toNumber } from "lodash-es";
 
 function getIP(req: NextRequest) {
   let ip = req.ip ?? req.headers.get("x-real-ip");
@@ -44,6 +45,16 @@ export function auth(req: NextRequest, modelProvider: ModelProvider) {
       error: true,
       msg: !accessCode ? "empty access code" : "wrong access code",
     };
+  }
+
+  if (accessCode.indexOf("@") > -1) {
+    const time = toNumber(accessCode.split("@")[1]);
+    if (time < new Date().getTime()) {
+      return {
+        error: true,
+        msg: "access code expired",
+      };
+    }
   }
 
   if (serverConfig.hideUserApiKey && !!apiKey) {
