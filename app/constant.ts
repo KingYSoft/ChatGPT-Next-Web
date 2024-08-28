@@ -477,7 +477,7 @@ export const internalAllowedWebDavEndpoints = [
   "https://app.koofr.net/dav/Koofr",
 ];
 
-export const DEFAULT_GA_ID = "G-89WN60ZK2E";
+export const DEFAULT_GA_ID = ""; //"G-89WN60ZK2E";
 export const PLUGINS = [
   { name: "Stable Diffusion", path: Path.Sd },
   { name: "Search Chat", path: Path.SearchChat },
