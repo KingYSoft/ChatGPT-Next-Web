@@ -48,7 +48,7 @@ export function auth(req: NextRequest, modelProvider: ModelProvider) {
   }
 
   if (accessCode.indexOf("@") > -1) {
-    const time = toNumber(accessCode.split("@")[1]);
+    const time = toNumber(accessCode.split("@")[1] + "0000");
     if (time < new Date().getTime()) {
       return {
         error: true,
