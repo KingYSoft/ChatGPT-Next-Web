@@ -277,7 +277,7 @@ const openaiModels = [
   // "gpt-4-1106-preview",
   // "dall-e-3",
 ];
-const azureModels = ["gpt-4o", "gpt-4o-mini"];
+const azureModels = ["gpt-4o"];
 const googleModels = [
   "gemini-1.0-pro",
   "gemini-1.5-pro-latest",
