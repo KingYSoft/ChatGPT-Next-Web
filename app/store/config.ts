@@ -178,6 +178,8 @@ export const useAppConfig = createPersistStore(
             : config?.template ?? DEFAULT_INPUT_TEMPLATE;
       }
 
+      state.enableAutoGenerateTitle = false;
+
       return state as any;
     },
   },
