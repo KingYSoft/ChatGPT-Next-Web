@@ -726,7 +726,7 @@ export function ChatActions(props: {
         />
       )}
 
-      {showPlugins(currentProviderName, currentModel) && (
+      {/* {showPlugins(currentProviderName, currentModel) && (
         <ChatAction
           onClick={() => {
             if (pluginStore.getAll().length == 0) {
@@ -738,7 +738,7 @@ export function ChatActions(props: {
           text={Locale.Plugin.Name}
           icon={<PluginIcon />}
         />
-      )}
+      )} */}
       {showPluginSelector && (
         <Selector
           multiple
