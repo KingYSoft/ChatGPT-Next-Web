@@ -24,7 +24,6 @@ import MaskIcon from "../icons/mask.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
 import ResetIcon from "../icons/reload.svg";
-import BreakIcon from "../icons/break.svg";
 import SettingsIcon from "../icons/chat-settings.svg";
 import DeleteIcon from "../icons/clear.svg";
 import PinIcon from "../icons/pin.svg";
@@ -43,7 +42,6 @@ import RobotIcon from "../icons/robot.svg";
 import SizeIcon from "../icons/size.svg";
 import QualityIcon from "../icons/hd.svg";
 import StyleIcon from "../icons/palette.svg";
-import ShortcutkeyIcon from "../icons/shortcutkey.svg";
 import ReloadIcon from "../icons/reload.svg";
 
 import {
@@ -607,7 +605,7 @@ export function ChatActions(props: {
 
       <ChatAction
         text={Locale.Chat.InputActions.Clear}
-        icon={<BreakIcon />}
+        icon={<DeleteIcon />}
         onClick={() => {
           chatStore.updateCurrentSession((session) => {
             if (session.clearContextIndex === session.messages.length) {
@@ -771,13 +769,13 @@ export function ChatActions(props: {
         />
       )}
 
-      {!isMobileScreen && (
+      {/* {!isMobileScreen && (
         <ChatAction
           onClick={() => props.setShowShortcutKeyModal(true)}
           text={Locale.Chat.ShortcutKey.Title}
           icon={<ShortcutkeyIcon />}
         />
-      )}
+      )} */}
     </div>
   );
 }
