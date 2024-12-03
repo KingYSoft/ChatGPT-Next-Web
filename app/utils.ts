@@ -281,6 +281,7 @@ export function isDalle3(model: string) {
 }
 
 export function showPlugins(provider: ServiceProvider, model: string) {
+  return false;
   if (
     provider == ServiceProvider.OpenAI ||
     provider == ServiceProvider.Azure ||
