@@ -255,6 +255,7 @@ export const useAppConfig = createPersistStore(
           DEFAULT_CONFIG.modelConfig.compressProviderName;
       }
 
+      state.enableAutoGenerateTitle = false;
       return state as any;
     },
   },
