@@ -48,7 +48,7 @@ export const DEFAULT_CONFIG = {
   theme: Theme.Auto as Theme,
   tightBorder: !!config?.isApp,
   sendPreviewBubble: true,
-  enableAutoGenerateTitle: true,
+  enableAutoGenerateTitle: false,
   sidebarWidth: DEFAULT_SIDEBAR_WIDTH,
 
   enableArtifacts: true, // show artifacts config
@@ -255,7 +255,6 @@ export const useAppConfig = createPersistStore(
           DEFAULT_CONFIG.modelConfig.compressProviderName;
       }
 
-      state.enableAutoGenerateTitle = false;
       return state as any;
     },
   },
