@@ -1768,7 +1768,7 @@ export function Settings() {
             </ListItem>
           ) : null}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Access.CustomModel.Title}
             subTitle={Locale.Settings.Access.CustomModel.SubTitle}
             vertical={true}
@@ -1785,7 +1785,7 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem> */}
         </List>
 
         <List>
